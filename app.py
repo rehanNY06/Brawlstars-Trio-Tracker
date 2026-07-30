@@ -22,7 +22,7 @@ def load_config():
 config = load_config()
 API_KEY = config["brawlstars_api_key"]
 TRIO_TAGS = config["trio_tags"]
-PLAYER_TAG = TRIO_TAGS[0]  # used as the "anchor" account for battlelog polling
+PLAYER_TAG = TRIO_TAGS[0] 
 
 
 def get_player(tag, api_key):

@@ -30,7 +30,6 @@ async function loadState() {
   const data = await response.json();
 
   if (!data.trio_tags || !data.profiles) {
-    // Poller hasn't completed its first cycle yet
     return;
   }
 
