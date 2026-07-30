@@ -1,0 +1,148 @@
+body {
+  font-family: "Lilita One", sans-serif;
+  color: #eee;
+  text-align: center;
+  padding: 30px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://i.pinimg.com/originals/f1/5e/5a/f15e5a491e3e6a1e4e35877b083c17fc.gif") center center / cover no-repeat fixed;
+  min-height: 100vh;
+}
+
+.top-bar {
+  margin-bottom: 30px;
+}
+
+.cards-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 10px;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card-name {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.card:hover .tooltip {
+  display: block;
+}
+
+.clown-overlay {
+  position: absolute;
+  top: -18px;
+  right: -10px;
+  font-size: 28px;
+  z-index: 5;
+}
+
+#history-list {
+  max-width: 650px;
+  max-height: 400px;
+  overflow-y: auto;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 10px;
+}
+
+.history-row {
+  position: relative;
+}
+
+.mode-icon {
+  position: absolute;
+  top: -14px;
+  left: 20px;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid #7c6fd1;
+  z-index: 2;
+  background: #333;
+}
+
+.history-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border: 2px solid #7c6fd1;
+  border-radius: 999px;
+  padding: 8px 24px;
+  flex-shrink: 0;
+}
+
+.history-bar.win {
+  background: #a9e0b0;
+}
+
+.history-bar.loss {
+  background: #e6a3a3;
+}
+
+.history-cell {
+  position: relative;
+  width: 130px;
+  height: 64px;
+  background: #111;
+  border: 2px solid #000;
+  transform: skewX(-20deg);
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.history-cell img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%) skewX(20deg) scale(1.35);
+}
+
+.history-cell.star-player {
+  box-shadow: 0 0 16px 4px gold;
+}
